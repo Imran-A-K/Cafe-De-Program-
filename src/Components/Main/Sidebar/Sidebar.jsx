@@ -5,7 +5,7 @@ const Sidebar = ({totalReadTime,bookMarkList}) => {
   return (
     <div className='w-full flex flex-col gap-4 sticky top-0'>
 {/* <input className='bg-teal-300 w-full' type="text" value={totalReadTime} disabled /> */}
-    <p className='text-center'>Time spent on read: {totalReadTime}</p>
+    <p className='text-center pt-3 bg-[#6047EC]/[0.1] h-12 font-semibold text-[#6047EC]'>Spent time on read: {totalReadTime}</p>
     <div className='flex flex-col gap-4'>
         <p className='text-center'> Total Bookmarks: {bookMarkList.length} </p>
         <div className='flex flex-col gap-2'>

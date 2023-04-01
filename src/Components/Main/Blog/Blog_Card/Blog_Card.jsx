@@ -30,7 +30,6 @@ const Blog_Card = ({blogData,updateReadTime,handleBookMark}) => {
 
           <div className="relative flex max-[600px]:flex-col-reverse max-[600px]:gap-5 items-center gap-1">
             <p className="">{read_time < 10 ? `0${read_time}` : read_time} min read</p>
-{/* <span className="cursor-pointer max-[600px]:absolute max-[600px]:-top-5 max-[600px]:right-0"> */}
 <span onClick={() => handleBookMark(id,blog_title)} className="cursor-pointer max-[600px]:-mr-[60px]">
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
   <path strokeLinecap="round" strokeLinejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
