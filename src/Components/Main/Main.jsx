@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Blog from './Blog/Blog'
 import Sidebar from './Sidebar/Sidebar'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Main = () => {
   const [totalReadTime, setTotalReadTime] = useState(0);
@@ -9,7 +11,7 @@ const Main = () => {
   const handleBookMark = (id,blog_title)=>{
     const exists = bookMarkList.find( blog => blog.id === id);
     if(exists){
-      console.log("already added you can't add more");
+      toast("You have already bookmarked this Blog!");
       return
     }
     else{
@@ -28,7 +30,7 @@ const Main = () => {
         <Blog handleBookMark={handleBookMark} updateReadTime={updateReadTime} />    
         <Sidebar bookMarkList={bookMarkList} totalReadTime={totalReadTime} />
         
-        
+        <ToastContainer />
         
     </div>
   )
