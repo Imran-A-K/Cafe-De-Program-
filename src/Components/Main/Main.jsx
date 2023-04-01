@@ -3,6 +3,7 @@ import Blog from './Blog/Blog'
 import Sidebar from './Sidebar/Sidebar'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Blog_Qa from './Blog/Blog_Qa/Blog_Qa';
 
 const Main = () => {
   const [totalReadTime, setTotalReadTime] = useState(0);
@@ -25,13 +26,18 @@ const Main = () => {
     setTotalReadTime(totalTimeToRead)
   }
   return (
+    <div className='flex flex-col'>
+ 
     < div className='grid grid-cols-1 md:grid-cols-[3fr_1fr] gap-4 p-5 '>
         
         <Blog handleBookMark={handleBookMark} updateReadTime={updateReadTime} />    
         <Sidebar bookMarkList={bookMarkList} totalReadTime={totalReadTime} />
         
-        <ToastContainer />
         
+        
+    </div>
+    <Blog_Qa />
+    <ToastContainer />
     </div>
   )
 }

@@ -15,7 +15,7 @@ const Blog = ({updateReadTime,handleBookMark}) => {
       {
         blogDb.map( blogData => <Blog_Card key={blogData.id} blogData={blogData} updateReadTime={updateReadTime} handleBookMark={handleBookMark} />)
       }
-        <Blog_Qa />
+        
     </div>
   )
 }
